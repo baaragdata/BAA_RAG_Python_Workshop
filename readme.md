@@ -1,6 +1,6 @@
 # BAA Radio Astronomy Group
-Workshop on 
-An Introduction to Python for Radio Astronomers
+        Workshop on 
+## An Introduction to Python for Radio Astronomers
 
 Syllabus:
 1) Interfacing to peripherals such as AD/DA convertors and SDRs using Raspberry Pis & Beaglebone SBCs. (Single Board Computers) Including the newly released Raspberry Pi Pico
