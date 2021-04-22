@@ -1,6 +1,6 @@
 ![Baa Logo](baa_logo.png)
 # BAA Radio Astronomy Group
-_Workshop on _
+*Workshop on*
 ## An Introduction to Python for Radio Astronomers
 
 Syllabus:
