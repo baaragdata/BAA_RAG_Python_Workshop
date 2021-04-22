@@ -29,7 +29,7 @@ def run():
         #motorPos = angle.read_u16()
         #pwm.duty_u16(speed)
         print(utime.gmtime()[5], "Speed", speed)
-        utime.sleep(0.5)
+        utime.sleep(1)
         
     logFile.close()
     
