@@ -1,6 +1,6 @@
 import serial
 
-port = "/dev/gps1"
+port = "/dev/gps0"
 
 def parseGPS(data):
     #print("raw:", data)
@@ -33,5 +33,5 @@ def decode(coord):
 ser = serial.Serial(port, baudrate = 9600, timeout = 0.5)
 while True:
     data = ser.readline()
-    #print(data)
+    print(data)
     parseGPS(data)
