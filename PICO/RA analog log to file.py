@@ -10,11 +10,7 @@ import machine
 import utime
 import uos
 
-pwm = machine.PWM(machine.Pin(16))
-pwm.freq(10000)
-
 potentiometer = machine.ADC(26)
-angle = machine.ADC(27)
 
 def run():
     try:
@@ -22,13 +18,11 @@ def run():
     except OSError:
         logFile = open('vals.txt', 'w')                
     for i in range(10):
-        speed = potentiometer.read_u16()
-        tmtpl = utime.gmtime()
-        logFile.write("{}:{}:{},{}".format(tmtpl[3], tmtpl[4], tmtpl[5], str(speed) + '\n'))
+        value = potentiometer.read_u16()
+        timeNow = utime.gmtime()
+        logFile.write("{}:{}:{},{}".format(timeNow[3], timeNow[4], timeNow[5], str(value) + '\n'))
         logFile.flush()
-        #motorPos = angle.read_u16()
-        #pwm.duty_u16(speed)
-        print(utime.gmtime()[5], "Speed", speed)
+        print(timeNow[5], "Value =", value)
         utime.sleep(1)
         
     logFile.close()

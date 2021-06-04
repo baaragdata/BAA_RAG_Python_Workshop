@@ -2,9 +2,14 @@ import PySimpleGUI as sg
 import time
 import serial
 
+'''
+    PySimpleGUI - Information of midow layout
+    https://pysimplegui.readthedocs.io/en/latest/#the-window-designer
+'''
+
 layout = [[sg.Text('Motor Control'), sg.Text('', key='-OUTPUT-')],
         [sg.RealtimeButton('<', size=(10,5), ), sg.RealtimeButton('STOP', size=(10,5)), sg.RealtimeButton('>', size=(10,5))],
-        [sg.Slider((0,65535), key='SLIDER', orientation='h', enable_events=True, disable_number_display=False), sg.Button("SET SPEED")],
+        [sg.Slider((22000,65535), key='SLIDER', orientation='h', enable_events=True, disable_number_display=False), sg.Button("SET SPEED")],
         [sg.Button('Exit')]]
 
 window = sg.Window('Remote Motor Control', layout)
