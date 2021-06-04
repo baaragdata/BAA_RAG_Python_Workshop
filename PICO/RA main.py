@@ -1,9 +1,8 @@
 from machine import Pin
 import time
 from machine import UART, PWM
-#from serial.serialutil import Timeout
 
-print("Pico Test")
+print("Pico Motor Test")
 
 but = Pin(16, Pin.IN, pull=Pin.PULL_UP)
 uart0 = UART(0, baudrate=9600, tx=Pin(0), rx=Pin(1), timeout=1)
